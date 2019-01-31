@@ -2,13 +2,15 @@
 A python implementation of the Earthmover distance metric.
 '''
 
+import math
+
 from collections import Counter
 from collections import defaultdict
 from ortools.linear_solver import pywraplp
 
 
 def euclidean_distance(x, y):
-    return sum((a - b)**2 for (a, b) in zip(x, y))
+    return math.sqrt(sum((a - b)**2 for (a, b) in zip(x, y)))
 
 
 def earthmover_distance(p1, p2):
