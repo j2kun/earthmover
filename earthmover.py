@@ -22,8 +22,8 @@ def earthmover_distance(p1, p2):
      - p1: an iterable of hashable iterables of numbers (i.e., list of tuples)
      - p2: an iterable of hashable iterables of numbers (i.e., list of tuples)
     '''
-    dist1 = {x: count / len(p1) for (x, count) in Counter(p1).items()}
-    dist2 = {x: count / len(p2) for (x, count) in Counter(p2).items()}
+    dist1 = {x: float(count) / len(p1) for (x, count) in Counter(p1).items()}
+    dist2 = {x: float(count) / len(p2) for (x, count) in Counter(p2).items()}
     solver = pywraplp.Solver('earthmover_distance', pywraplp.Solver.GLOP_LINEAR_PROGRAMMING)
 
     variables = dict()
