@@ -7,7 +7,7 @@ To install:
 ```
 git clone https://github.com/j2kun/earthmover.git
 cd earthmover
-virtualenv -p python3.6 venv
+virtualenv -p python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
